@@ -1,0 +1,19 @@
+<p>
+  {{homeTitle}}
+</p>
+<button type="button" class="btn btn-success" (click)="logIt()">Log Me</button>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr class="info">
+      <th>Name</th>
+      <th>Belt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ninja of ninjas | async">
+      <td> {{ninja.name}} </td>
+      <td> {{ninja.belt}} </td>
+    </tr>
+  </tbody>
+</table>
